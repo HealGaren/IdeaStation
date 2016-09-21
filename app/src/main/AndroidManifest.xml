@@ -3,20 +3,32 @@
     package="kr.applepi.kotlintest">
 
     <application
+        android:name=".PiApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SplashActivity" />
         <activity
-            android:name=".MainActivity"
+            android:name=".activities.SplashActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.MainActivity"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".IdeaActivity" />
-        <activity android:name=".MandaratActivity" />
-        <activity android:name=".VideoActivity" />
-        <activity android:name=".SearchActivity" />
-        <activity android:name=".ListActivity"></activity>
+        <activity android:name=".activities.IdeaActivity" />
+        <activity android:name=".activities.MandaratActivity" />
+        <activity android:name=".activities.VideoActivity" />
+        <activity android:name=".activities.SearchActivity" />
+        <activity android:name=".activities.ListActivity" />
+        <activity
+            android:name=".activities.SelectActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
     </application>
 
 </manifest>

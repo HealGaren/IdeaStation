@@ -1,12 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="kr.applepi.kotlintest.MandaratActivity">
+    tools:context=".activities.MandaratActivity">
 
+    <android.support.v7.widget.CardView
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <kr.applepi.kotlintest.views.MandaratView
+            android:layout_width="@dimen/mandarat_tile_size"
+            android:layout_height="@dimen/mandarat_tile_size"
+            app:mandarat_textColor="@color/colorWhiteText"/>
+    </android.support.v7.widget.CardView>
 </RelativeLayout>

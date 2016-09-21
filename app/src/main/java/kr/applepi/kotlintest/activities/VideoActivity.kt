@@ -1,7 +1,8 @@
-package kr.applepi.kotlintest
+package kr.applepi.kotlintest.activities
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import kr.applepi.kotlintest.R
 
 class VideoActivity : AppCompatActivity() {
 
