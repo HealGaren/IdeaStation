@@ -2,15 +2,22 @@
 <resources>
     <color name="colorPrimary">#03A9F4</color>
     <color name="colorPrimaryDark">#0288D1</color>
+    <color name="colorPrimaryLight">#4FC3F7</color>
     <color name="colorAccent">#FB8C00</color>
+    <color name="colorAccentDark">#EF6C00</color>
     <color name="colorRipple">#2000</color>
     <color name="colorDrawerText">#424242</color>
 
     <color name="colorWhiteText">#FFF</color>
+
+    <color name="colorSplashBackground">#ddd</color>
 
 
     <color name="colorMandaratLine">#0000</color>
     <color name="colorMandaratHigh">#0288D1</color>
     <color name="colorMandaratMedium">#03A9F4</color>
     <color name="colorMandaratLow">#4FC3F7</color>
+
+    <color name="dictionary_color">#616161</color>
+    <color name="dictionary_ui">#424242</color>
 </resources>

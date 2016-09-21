@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.os.Handler
 import kr.applepi.kotlintest.R
 
-class SplashActivity : AppCompatActivity() {
+class SplashActivity : BaseAppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

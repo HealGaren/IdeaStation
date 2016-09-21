@@ -16,7 +16,7 @@ import kr.applepi.kotlintest.animations.FlipAnimation
 /**
  * Created by 최예찬 on 2016-09-18.
  */
-class SelectActivity : AppCompatActivity() {
+class SelectActivity : BaseAppCompatActivity() {
 
     var selectType: View? = null
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,13 +7,21 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".SplashActivity">
+    android:background="@color/colorPrimaryDark"
+    tools:context=".activities.SplashActivity"
+    android:gravity="center"
+    android:orientation="vertical">
 
     <ImageView
         android:id="@+id/img_splash"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:src="@mipmap/ic_launcher"
-        android:layout_centerInParent="true"/>
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/ic_splash"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="아이디어\n주유소"
+        android:textColor="#fff"
+        android:textSize="40dp"/>
 
-</RelativeLayout>
+</LinearLayout>

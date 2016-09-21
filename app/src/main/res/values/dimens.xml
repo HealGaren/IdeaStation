@@ -10,6 +10,13 @@
     <dimen name="main_button_margin_top">20dp</dimen>
 
     <dimen name="mandarat_tile_size">310dp</dimen>
-
     <dimen name="mandarat_line_width">1dp</dimen>
+
+
+
+    <dimen name="cardCornerRadius">2.5dp</dimen>
+    <dimen name="cardElevation">4dp</dimen>
+    <dimen name="cardMarginHorizontal">8dp</dimen>
+    <dimen name="cardMarginVertical">4dp</dimen>
+    <dimen name="cardMarginTopBottom">8dp</dimen>
 </resources>
