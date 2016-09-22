@@ -3,8 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:showIn="@layout/activity_idea">
+    android:orientation="vertical">
 
 
     <LinearLayout
@@ -50,10 +49,10 @@
         android:gravity="center_vertical">
 
         <TextView
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:gravity="center"
-            android:textSize="19sp"
+            android:textSize="15sp"
             android:background="@drawable/circle_maincolor"
             android:text="이점"
             android:textColor="@color/colorPrimary"/>
@@ -82,10 +81,10 @@
         android:gravity="center_vertical">
 
         <TextView
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:gravity="center"
-            android:textSize="19sp"
+            android:textSize="15sp"
             android:background="@drawable/circle_maincolor"
             android:text="구체화"
             android:textColor="@color/colorPrimary"/>
@@ -95,133 +94,160 @@
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
             android:background="#BDBDBD" />
-        <LinearLayout
+        <HorizontalScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center">
-
+            android:layout_height="wrap_content">
             <LinearLayout
-                android:layout_width="@dimen/idea_5w_size"
-                android:layout_height="@dimen/idea_5w_size"
-                android:background="@drawable/lessround_rect_maincolor"
-                android:layout_margin="1dp"
-                android:padding="5dp"
-                android:orientation="vertical">
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="When"
-                    android:textColor="@color/colorPrimary"
-                    android:gravity="center"
-                    />
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:textSize="@dimen/idea_5w_text_size"
-                    android:text="비가 오는 밤에"/>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <LinearLayout
-                    android:padding="5dp"
-                    android:layout_width="@dimen/idea_5w_size"
-                    android:layout_height="@dimen/idea_5w_size"
-                    android:background="@drawable/lessround_rect_accent"
-                    android:layout_margin="1dp"
-                    android:orientation="vertical">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="What"
-                        android:textColor="@color/colorAccent"
-                        android:gravity="center"
-                        />
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:textSize="@dimen/idea_5w_text_size"
-                        android:text="전구가 달린 우산을"/>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="@dimen/idea_5w_size"
-                    android:layout_height="@dimen/idea_5w_size"
-                    android:background="@drawable/lessround_rect_grey"
-                    android:layout_margin="1dp"
-                    android:padding="5dp"
-                    android:orientation="vertical">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Who"
-                        android:textColor="@color/colorGrey"
-                        android:gravity="center"
-                        />
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:textSize="@dimen/idea_5w_text_size"
-                        android:text="비 오는 날 외출하는 사람"/>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="@dimen/idea_5w_size"
-                    android:layout_height="@dimen/idea_5w_size"
-                    android:background="@drawable/lessround_rect_accent"
-                    android:layout_margin="1dp"
-                    android:padding="5dp"
-                    android:orientation="vertical">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Why"
-                        android:textColor="@color/colorAccent"
-                        android:gravity="center"
-                        />
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:textSize="@dimen/idea_5w_text_size"
-                        android:text="앞을 잘 보고 사고를 예방하기 위해"/>
-                </LinearLayout>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="@dimen/idea_5w_size"
-                android:layout_height="@dimen/idea_5w_size"
-                android:background="@drawable/lessround_rect_maincolor"
-                android:layout_margin="1dp"
-                android:padding="5dp"
-                android:orientation="vertical">
+                android:orientation="horizontal"
+                android:gravity="center">
                 <TextView
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
+                    android:textSize="10sp"
+                    android:layout_marginRight="5dp"
                     android:layout_height="wrap_content"
-                    android:text="Where"
-                    android:textColor="@color/colorPrimary"
+                    android:text="환\n경\n축"
+                    android:textColor="@color/colorPrimary" />
+                <LinearLayout
+                    android:layout_width="@dimen/idea_5w_size"
+                    android:layout_height="@dimen/idea_5w_size"
+                    android:background="@drawable/lessround_rect_maincolor"
+                    android:layout_margin="1dp"
+                    android:padding="5dp"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="When"
+                        android:textColor="@color/colorPrimary"
+                        android:gravity="center"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textSize="@dimen/idea_5w_text_size"
+                        android:text="비가 오는 밤에"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:gravity="center"
-                    />
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:textSize="@dimen/idea_5w_text_size"
-                    android:text="밖에서"/>
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="행동축"
+                        android:textSize="10sp"
+                        android:layout_marginBottom="5dp"
+                        android:textColor="@color/colorAccent"
+                        android:gravity="center_horizontal" />
+                    <LinearLayout
+                        android:padding="5dp"
+                        android:layout_width="@dimen/idea_5w_size"
+                        android:layout_height="@dimen/idea_5w_size"
+                        android:background="@drawable/lessround_rect_accent"
+                        android:layout_margin="1dp"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="What"
+                            android:textColor="@color/colorAccent"
+                            android:gravity="center"
+                            />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:textSize="@dimen/idea_5w_text_size"
+                            android:text="전구가 달린 우산을"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="@dimen/idea_5w_size"
+                        android:layout_height="@dimen/idea_5w_size"
+                        android:background="@drawable/lessround_rect_grey"
+                        android:layout_margin="1dp"
+                        android:padding="5dp"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Who"
+                            android:textColor="@color/colorGrey"
+                            android:gravity="center"
+                            />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:textSize="@dimen/idea_5w_text_size"
+                            android:text="비 오는 날 외출하는 사람"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="@dimen/idea_5w_size"
+                        android:layout_height="@dimen/idea_5w_size"
+                        android:background="@drawable/lessround_rect_accent"
+                        android:layout_margin="1dp"
+                        android:padding="5dp"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Why"
+                            android:textColor="@color/colorAccent"
+                            android:gravity="center"
+                            />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:textSize="@dimen/idea_5w_text_size"
+                            android:text="앞을 잘 보고 사고를 예방하기 위해"/>
+                    </LinearLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="행동축"
+                        android:visibility="invisible"
+                        android:textSize="10sp"
+                        android:layout_marginBottom="5dp"
+                        android:textColor="@color/colorAccent"
+                        android:gravity="center_horizontal" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="@dimen/idea_5w_size"
+                    android:layout_height="@dimen/idea_5w_size"
+                    android:background="@drawable/lessround_rect_maincolor"
+                    android:layout_margin="1dp"
+                    android:padding="5dp"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Where"
+                        android:textColor="@color/colorPrimary"
+                        android:gravity="center"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textSize="@dimen/idea_5w_text_size"
+                        android:text="밖에서"/>
+                </LinearLayout>
             </LinearLayout>
-        </LinearLayout>
+        </HorizontalScrollView>
+
     </LinearLayout>
 
 

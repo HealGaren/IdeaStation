@@ -1,5 +1,6 @@
 package kr.applepi.kotlintest.activities
 
+import android.media.MediaPlayer
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
@@ -39,5 +40,24 @@ class VideoActivity : BaseAppCompatActivity() {
             android.R.id.home -> finish()
         }
         return super.onOptionsItemSelected(item)
+    }
+
+
+    fun stopMediaPlayer() {
+        val player = MediaPlayer()
+        if (player.isPlaying) {
+            player.stop()
+        }
+    }
+
+    override fun onPause() {
+        super.onPause()
+        webview.onPause()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        webview.onResume()
+
     }
 }

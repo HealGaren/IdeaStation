@@ -8,16 +8,16 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:showIn="@layout/activity_idea"
     tools:context=".activities.IdeaActivity"
+    android:fillViewport="true"
     android:background="#fff">
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
 
         <LinearLayout
-            android:layout_marginTop="10dp"
             android:layout_width="match_parent"
-            android:layout_height="45dp"
+            android:layout_height="50dp"
             android:paddingLeft="16dp"
             android:paddingRight="16dp"
             android:orientation="horizontal"
@@ -28,7 +28,7 @@
                 android:layout_weight="1"
                 >
                 <Button
-                    android:id="@+id/ranking_worldWide"
+                    android:id="@+id/btn_tab_detail"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="?attr/selectableItemBackground"
@@ -37,7 +37,7 @@
                     android:textColor="@color/colorPrimary"
                     />
                 <View
-                    android:id="@+id/ranking_worldWide_line"
+                    android:id="@+id/line_detail"
                     android:layout_width="match_parent"
                     android:layout_height="2dp"
                     android:layout_alignParentBottom="true"
@@ -50,7 +50,7 @@
                 android:layout_weight="1"
                 >
                 <Button
-                    android:id="@+id/ranking_friends"
+                    android:id="@+id/btn_tab_review"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="?attr/selectableItemBackground"
@@ -59,7 +59,7 @@
                     android:textColor="#BDBDBD"
                     />
                 <View
-                    android:id="@+id/ranking_friends_line"
+                    android:id="@+id/line_review"
                     android:layout_width="match_parent"
                     android:layout_height="2dp"
                     android:layout_alignParentBottom="true"
@@ -68,7 +68,15 @@
                     />
             </RelativeLayout>
         </LinearLayout>
-        <include layout="@layout/content_detail"/>
+
+        <ViewFlipper
+            android:id="@+id/flipper_idea"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:measureAllChildren="false">
+            <include layout="@layout/content_detail" />
+            <include layout="@layout/content_review" />
+        </ViewFlipper>
     </LinearLayout>
 
 </android.support.v4.widget.NestedScrollView>
