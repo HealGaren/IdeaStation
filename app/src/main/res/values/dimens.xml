@@ -13,10 +13,12 @@
     <dimen name="mandarat_line_width">1dp</dimen>
 
 
-
     <dimen name="cardCornerRadius">2.5dp</dimen>
     <dimen name="cardElevation">4dp</dimen>
     <dimen name="cardMarginHorizontal">8dp</dimen>
     <dimen name="cardMarginVertical">4dp</dimen>
     <dimen name="cardMarginTopBottom">8dp</dimen>
+
+    <dimen name="idea_5w_size">70dp</dimen>
+    <dimen name="idea_5w_text_size">10sp</dimen>
 </resources>

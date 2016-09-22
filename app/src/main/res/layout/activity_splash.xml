@@ -9,6 +9,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:background="@color/colorPrimaryDark"
     tools:context=".activities.SplashActivity"
+    android:fitsSystemWindows="true"
     android:gravity="center"
     android:orientation="vertical">
 

@@ -76,7 +76,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-            <include layout="@layout/item_idea"/>
+            <include layout="@layout/item_idea"
+                android:id="@+id/idea1"/>
             <include layout="@layout/item_idea2"/>
             <include layout="@layout/item_idea3"/>
         </LinearLayout>

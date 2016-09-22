@@ -5,6 +5,8 @@
     <color name="colorPrimaryLight">#4FC3F7</color>
     <color name="colorAccent">#FB8C00</color>
     <color name="colorAccentDark">#EF6C00</color>
+    <color name="colorGrey">#757575</color>
+    <color name="colorGrayDark">#424242</color>
     <color name="colorRipple">#2000</color>
     <color name="colorDrawerText">#424242</color>
 
