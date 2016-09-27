@@ -25,7 +25,8 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".activities.IdeaActivity"
             android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".activities.MandaratActivity" />
+        <activity android:name=".activities.MandaratActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".activities.VideoActivity"
             android:theme="@style/AppTheme.NoActionBar" />

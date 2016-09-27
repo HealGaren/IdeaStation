@@ -32,7 +32,7 @@
                     android:layout_height="0dp"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="조금 덜 좋다." />
+                    android:text="단어 조합법" />
             </LinearLayout>
 
             <RelativeLayout
@@ -75,7 +75,7 @@
                     android:layout_height="0dp"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="엄청난 조합법으로 bla bla bla 안랑니러ㅏㄴㅇ"
+                    android:text="단어를 조합하여 아이디어를 발상한다."
                     android:textSize="20sp" />
             </LinearLayout>
         </LinearLayout>

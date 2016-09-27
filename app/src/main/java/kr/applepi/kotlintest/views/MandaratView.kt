@@ -7,6 +7,8 @@ import android.content.SharedPreferences
 import android.content.res.TypedArray
 import android.graphics.Canvas
 import android.support.v4.content.ContextCompat
+import android.text.Editable
+import android.text.TextWatcher
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.view.View
@@ -51,6 +53,8 @@ class MandaratView : RelativeLayout {
 
         setTextColor(textColor)
         val tileArr: Array<View> = arrayOf(tile1, tile2, tile3, tile4, tile6, tile7, tile8, tile9)
+
+
         for (i in 0..tileArr.size - 1) {
             tileArr[i].run {
 
@@ -76,9 +80,18 @@ class MandaratView : RelativeLayout {
 
         tile5.run {
 
+            val editArr = arrayOf(edit1, edit2, edit3, edit4, edit6, edit7, edit8, edit9)
+            for(i in 0..tileArr.size-1) {
+                editArr[i].setBackgroundColor(ContextCompat.getColor(context, R.color.colorMandaratMedium))
+                editArr[i].addTextChangedListener(object : TextWatcher {
+                    override fun afterTextChanged(p0: Editable?) { }
+                    override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) { }
 
-            arrayOf(edit1, edit2, edit3, edit4, edit6, edit7, edit8, edit9).forEach {
-                it.setBackgroundColor(ContextCompat.getColor(context, R.color.colorMandaratMedium))
+                    override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+                        tileArr[i].edit5.setText(p0)
+                    }
+                })
+
             }
             edit5.setBackgroundColor(ContextCompat.getColor(context, R.color.colorMandaratHigh))
 
@@ -186,6 +199,16 @@ class MandaratView : RelativeLayout {
 
 
     fun save() {
+        arrayOf(tile1, tile2, tile3, tile4, tile5, tile6, tile7, tile8, tile9).forEach {
+            it.run {
+
+                arrayOf(edit1, edit2, edit3, edit4, edit5, edit6, edit7, edit8, edit9).forEach {
+
+
+
+                }
+            }
+        }
     }
 
     fun setTextColor(color: Int) {

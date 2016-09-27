@@ -33,7 +33,7 @@
                     android:layout_height="0dp"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="짱짱 좋다." />
+                    android:text="9개의 타일에 단어를 채워가는 방식입니다." />
             </LinearLayout>
 
             <RelativeLayout
@@ -76,7 +76,7 @@
                     android:layout_height="0dp"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="엄청난 조합법으로 bla bla bla 안랑니러ㅏㄴㅇ"
+                    android:text="많은 아이디어를 찾아내는 효과적인 개인의 아이디어 발상법이다."
                     android:textSize="20sp" />
             </LinearLayout>
         </LinearLayout>

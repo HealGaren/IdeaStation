@@ -2,6 +2,7 @@ package kr.applepi.kotlintest.activities
 
 import android.content.DialogInterface
 import android.content.Intent
+import android.databinding.DataBindingUtil
 import android.os.Bundle
 import android.os.PersistableBundle
 import android.support.v7.app.AppCompatActivity
@@ -12,6 +13,7 @@ import kotlinx.android.synthetic.main.activity_select.*
 import kotlinx.android.synthetic.main.activity_select.view.*
 import kr.applepi.kotlintest.R
 import kr.applepi.kotlintest.animations.FlipAnimation
+import kr.applepi.kotlintest.databinding.ActivitySearchBinding
 
 /**
  * Created by 최예찬 on 2016-09-18.
@@ -26,8 +28,8 @@ class SelectActivity : BaseAppCompatActivity() {
         setSupportActionBar(toolbar)
         arrayOf(btn_select_mandarat, btn_select_words).forEach { it.setOnClickListener{
 
-            if(!btn_select_done.isEnabled) btn_select_done.run{
-                alpha = 1f
+                if(!btn_select_done.isEnabled) btn_select_done.run{
+                    alpha = 1f
                 isEnabled = true
             }
 

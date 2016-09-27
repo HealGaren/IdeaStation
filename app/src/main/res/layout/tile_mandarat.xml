@@ -3,7 +3,7 @@
     android:orientation="vertical"
     android:layout_width="@dimen/mandarat_tile_size"
     android:layout_height="@dimen/mandarat_tile_size">
-    <RelativeLayout
+z    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <Button

@@ -1,5 +1,6 @@
 package kr.applepi.kotlintest.activities
 
+import android.databinding.DataBindingUtil
 import android.media.MediaPlayer
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -10,8 +11,11 @@ import android.webkit.WebViewClient
 import kotlinx.android.synthetic.main.activity_video.*
 import kotlinx.android.synthetic.main.item_video2.*
 import kr.applepi.kotlintest.R
+import kr.applepi.kotlintest.databinding.ActivitySearchBinding
 
 class VideoActivity : BaseAppCompatActivity() {
+
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

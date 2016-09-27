@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="@layout/content_idea">
+
+    <data>
+        <variable
+            name="item"
+            type="kr.applepi.kotlintest.data.IdeaDetail" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:id="@+id/trophy_profile_contents"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="10dp"
+            android:paddingLeft="20dp"
+            android:paddingTop="20dp">
+
+            <TextView
+                android:id="@+id/trophy_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{item.title}"
+                android:textColor="@color/colorPrimary"
+                android:textSize="35sp" />
+
+            <TextView
+                android:id="@+id/trophy_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@{item.content}"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="#BDBDBD" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/circle_maincolor"
+                android:gravity="center"
+                android:text="이점"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15sp" />
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+
+                android:background="#BDBDBD" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{item.benefit}"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/circle_maincolor"
+                android:gravity="center"
+                android:text="구체화"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15sp" />
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="#BDBDBD" />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:text="환\n경\n축"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="10sp" />
+
+                    <LinearLayout
+                        android:layout_width="@dimen/idea_5w_size"
+                        android:layout_height="@dimen/idea_5w_size"
+                        android:layout_margin="1dp"
+                        android:background="@drawable/lessround_rect_maincolor"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="When"
+                            android:textColor="@color/colorPrimary" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@{item.when5w}"
+                            android:textSize="@dimen/idea_5w_text_size" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:gravity="center_horizontal"
+                            android:text="행동축"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="10sp" />
+
+                        <LinearLayout
+                            android:layout_width="@dimen/idea_5w_size"
+                            android:layout_height="@dimen/idea_5w_size"
+                            android:layout_margin="1dp"
+                            android:background="@drawable/lessround_rect_accent"
+                            android:orientation="vertical"
+                            android:padding="5dp">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="What"
+                                android:textColor="@color/colorAccent" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@{item.what5w}"
+                                android:textSize="@dimen/idea_5w_text_size" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="@dimen/idea_5w_size"
+                            android:layout_height="@dimen/idea_5w_size"
+                            android:layout_margin="1dp"
+                            android:background="@drawable/lessround_rect_grey"
+                            android:orientation="vertical"
+                            android:padding="5dp">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Who"
+                                android:textColor="@color/colorGrey" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@{item.who5w}"
+                                android:textSize="@dimen/idea_5w_text_size" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="@dimen/idea_5w_size"
+                            android:layout_height="@dimen/idea_5w_size"
+                            android:layout_margin="1dp"
+                            android:background="@drawable/lessround_rect_accent"
+                            android:orientation="vertical"
+                            android:padding="5dp">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Why"
+                                android:textColor="@color/colorAccent" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@{item.why5w}"
+                                android:textSize="@dimen/idea_5w_text_size" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:gravity="center_horizontal"
+                            android:text="행동축"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="10sp"
+                            android:visibility="invisible" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="@dimen/idea_5w_size"
+                        android:layout_height="@dimen/idea_5w_size"
+                        android:layout_margin="1dp"
+                        android:background="@drawable/lessround_rect_maincolor"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Where"
+                            android:textColor="@color/colorPrimary" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@{item.where5w}"
+                            android:textSize="@dimen/idea_5w_text_size" />
+                    </LinearLayout>
+                </LinearLayout>
+            </HorizontalScrollView>
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:background="#BDBDBD" />
+
+        <Button
+            android:id="@+id/btn_searchPatent"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/main_button_height"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/btn_round_rect_maincolor"
+            android:text="아이디어 수정하기"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/main_button_text_size" />
+
+    </LinearLayout>
+
+</layout>
