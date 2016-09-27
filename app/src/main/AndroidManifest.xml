@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="kr.applepi.kotlintest">
+    package="kr.applepi.ideastation">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:name=".PiApplication"
+        android:name="kr.applepi.ideastation.PiApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".activities.SplashActivity"
+            android:name="kr.applepi.ideastation.activities.SplashActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,21 +21,22 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activities.MainActivity"
+            android:name="kr.applepi.ideastation.activities.MainActivity"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".activities.IdeaActivity"
+        <activity android:name="kr.applepi.ideastation.activities.IdeaActivity"
             android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".activities.MandaratActivity"
+        <activity android:name="kr.applepi.ideastation.activities.MandaratActivity"
+            android:windowSoftInputMode="adjustResize"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".activities.VideoActivity"
+            android:name="kr.applepi.ideastation.activities.VideoActivity"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".activities.SearchActivity" />
+        <activity android:name="kr.applepi.ideastation.activities.SearchActivity" />
         <activity
-            android:name=".activities.ListActivity"
+            android:name="kr.applepi.ideastation.activities.ListActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".activities.SelectActivity"
+            android:name="kr.applepi.ideastation.activities.SelectActivity"
             android:theme="@style/AppTheme.NoActionBar" />
     </application>
 

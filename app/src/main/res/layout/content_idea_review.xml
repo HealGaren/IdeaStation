@@ -8,7 +8,7 @@
         <import type="android.view.View"/>
         <variable
             name="item"
-            type="kr.applepi.kotlintest.data.IdeaReview" />
+            type="kr.applepi.ideastation.data.IdeaReview" />
     </data>
 
     <LinearLayout

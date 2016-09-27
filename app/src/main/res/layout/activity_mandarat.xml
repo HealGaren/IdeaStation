@@ -68,7 +68,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true">
 
-                <kr.applepi.kotlintest.views.MandaratView
+                <kr.applepi.ideastation.views.MandaratView
                     android:layout_width="@dimen/mandarat_tile_size"
                     android:layout_height="@dimen/mandarat_tile_size"
                     app:mandarat_textColor="@color/colorWhiteText" />

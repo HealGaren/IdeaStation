@@ -7,7 +7,7 @@
     <data>
         <variable
             name="item"
-            type="kr.applepi.kotlintest.data.IdeaDetail" />
+            type="kr.applepi.ideastation.data.IdeaDetail" />
     </data>
 
     <LinearLayout
