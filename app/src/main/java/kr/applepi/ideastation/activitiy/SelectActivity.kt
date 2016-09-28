@@ -1,4 +1,4 @@
-package kr.applepi.ideastation.activities
+package kr.applepi.ideastation.activitiy
 
 import android.content.DialogInterface
 import android.content.Intent
@@ -12,7 +12,7 @@ import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_select.*
 import kotlinx.android.synthetic.main.activity_select.view.*
 import kr.applepi.ideastation.R
-import kr.applepi.ideastation.animations.FlipAnimation
+import kr.applepi.ideastation.animation.FlipAnimation
 import kr.applepi.ideastation.databinding.ActivitySearchBinding
 
 /**
@@ -27,7 +27,6 @@ class SelectActivity : BaseAppCompatActivity() {
         setContentView(R.layout.activity_select)
         setSupportActionBar(toolbar)
         arrayOf(btn_select_mandarat, btn_select_words).forEach { it.setOnClickListener{
-
                 if(!btn_select_done.isEnabled) btn_select_done.run{
                     alpha = 1f
                 isEnabled = true

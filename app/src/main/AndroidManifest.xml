@@ -12,8 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name="kr.applepi.ideastation.activities.SplashActivity"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:name="kr.applepi.ideastation.activitiy.SplashActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -21,23 +22,31 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="kr.applepi.ideastation.activities.MainActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name="kr.applepi.ideastation.activities.IdeaActivity"
-            android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name="kr.applepi.ideastation.activities.MandaratActivity"
+            android:name="kr.applepi.ideastation.activitiy.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait"/>
+        <activity android:name="kr.applepi.ideastation.activitiy.IdeaActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait"/>
+        <activity android:name="kr.applepi.ideastation.activitiy.MandaratActivity"
             android:windowSoftInputMode="adjustResize"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait"/>
         <activity
-            android:name="kr.applepi.ideastation.activities.VideoActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name="kr.applepi.ideastation.activities.SearchActivity" />
+            android:name="kr.applepi.ideastation.activitiy.VideoActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait"/>
         <activity
-            android:name="kr.applepi.ideastation.activities.ListActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:name="kr.applepi.ideastation.activitiy.SearchActivity"
+            android:screenOrientation="portrait"/>
         <activity
-            android:name="kr.applepi.ideastation.activities.SelectActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:name="kr.applepi.ideastation.activitiy.ListActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="kr.applepi.ideastation.activitiy.SelectActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

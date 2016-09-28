@@ -1,4 +1,4 @@
-package kr.applepi.ideastation.animations
+package kr.applepi.ideastation.animation
 
 import android.graphics.Camera
 import android.view.View

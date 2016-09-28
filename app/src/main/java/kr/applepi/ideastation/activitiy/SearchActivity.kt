@@ -1,4 +1,4 @@
-package kr.applepi.ideastation.activities
+package kr.applepi.ideastation.activitiy
 
 import android.databinding.DataBindingUtil
 import android.support.v7.app.AppCompatActivity

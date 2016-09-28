@@ -11,7 +11,7 @@
         android:paddingLeft="20dp"
         android:paddingRight="20dp"
         android:paddingTop="50dp"
-        tools:context=".activities.IdeaActivity"
+        tools:context=".activitiy.IdeaActivity"
         tools:showIn="@layout/activity_idea">
 
         <LinearLayout

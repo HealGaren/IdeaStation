@@ -78,7 +78,7 @@
                 android:id="@+id/flipper_idea"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:measureAllChildren="true">
+                android:measureAllChildren="false">
 
                 <include
                     layout="@layout/content_idea_detail"

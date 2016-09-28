@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ViewFlipper xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:clipChildren="false"
     android:clipToPadding="false">
 
     <LinearLayout
-        android:id="@+id/superView"
+        android:id="@+id/superView_edit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:clipChildren="false"
@@ -68,4 +68,68 @@
         </LinearLayout>
 
     </LinearLayout>
-</FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/superView_show"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <include
+                android:id="@+id/tile1"
+                layout="@layout/tile_mandarat_show" />
+
+            <include
+                android:id="@+id/tile2"
+                layout="@layout/tile_mandarat_show" />
+
+            <include
+                android:id="@+id/tile3"
+                layout="@layout/tile_mandarat_show" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <include
+                android:id="@+id/tile4"
+                layout="@layout/tile_mandarat" />
+
+            <include
+                android:id="@+id/tile5"
+                layout="@layout/tile_mandarat" />
+
+            <include
+                android:id="@+id/tile6"
+                layout="@layout/tile_mandarat" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <include
+                android:id="@+id/tile7"
+                layout="@layout/tile_mandarat" />
+
+            <include
+                android:id="@+id/tile8"
+                layout="@layout/tile_mandarat" />
+
+            <include
+                android:id="@+id/tile9"
+                layout="@layout/tile_mandarat" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ViewFlipper>

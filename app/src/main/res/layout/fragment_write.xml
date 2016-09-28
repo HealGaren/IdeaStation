@@ -4,7 +4,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:showIn="@layout/dialog_mandarat_write"
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
     >
@@ -235,6 +234,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
         android:background="@drawable/btn_round_rect_maincolor"
         android:text="입력 완료!"
         android:textColor="@color/colorPrimary"

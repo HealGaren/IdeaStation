@@ -1,4 +1,4 @@
-package kr.applepi.ideastation.views
+package kr.applepi.ideastation.view
 
 import android.animation.ObjectAnimator
 import android.animation.ValueAnimator
@@ -104,6 +104,8 @@ class MandaratView : RelativeLayout {
                 btnArr[i].setOnClickListener { gotoChild(tileArr[i]) }
             }
         }
+
+        setTileToCenter()
 
 
     }
@@ -219,6 +221,13 @@ class MandaratView : RelativeLayout {
                 }
             }
         }
+    }
+
+    fun setTileToCenter(){
+        val params = superView.layoutParams as FrameLayout.LayoutParams
+        params.leftMargin = -tile4.width
+        params.topMargin = -tile2.height
+        superView.layoutParams = params
     }
 
 }

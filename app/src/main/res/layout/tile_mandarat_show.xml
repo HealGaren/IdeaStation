@@ -3,64 +3,12 @@
     android:orientation="vertical"
     android:layout_width="@dimen/mandarat_tile_size"
     android:layout_height="@dimen/mandarat_tile_size">
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <Button
-            android:id="@+id/btn_left_up"
-            android:layout_margin="10dp"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:background="@drawable/btn_round_rect_maincolor"
-            android:textColor="@color/colorPrimary"
-            android:gravity="center"
-            android:text="↖"
-            android:layout_alignParentLeft="true"
-            android:layout_centerVertical="true"/>
-        <Button
-            android:id="@+id/btn_up"
-            android:layout_margin="10dp"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:background="@drawable/btn_round_rect_maincolor"
-            android:textColor="@color/colorPrimary"
-            android:gravity="center"
-            android:text="↑"
-            android:layout_centerInParent="true"/>
-
-        <Button
-            android:id="@+id/btn_right_up"
-            android:layout_margin="10dp"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:background="@drawable/btn_round_rect_maincolor"
-            android:textColor="@color/colorPrimary"
-            android:gravity="center"
-            android:text="↗"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"/>
-    </RelativeLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:orientation="horizontal"
         android:layout_weight="1">
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent">
-
-            <Button
-                android:layout_margin="10dp"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:background="@drawable/btn_round_rect_maincolor"
-                android:textColor="@color/colorPrimary"
-                android:gravity="center"
-                android:id="@+id/btn_left"
-                android:text="←"
-                android:layout_centerInParent="true"/>
-        </RelativeLayout>
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -84,8 +32,8 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1">
-                    <EditText
-                        android:id="@+id/edit1"
+                    <TextView
+                        android:id="@+id/text1"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:gravity="center"
@@ -100,8 +48,8 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1">
-                    <EditText
-                        android:id="@+id/edit2"
+                    <TextView
+                        android:id="@+id/text2"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:gravity="center"
@@ -115,71 +63,8 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1">
-                    <EditText
-                        android:id="@+id/edit3"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:background="@android:color/transparent"/>
-                </LinearLayout>
-
-                <View
-                    android:layout_width="@dimen/mandarat_line_width"
-                    android:layout_height="match_parent"
-                    android:background="@color/colorMandaratLine"/>
-            </LinearLayout>
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/mandarat_line_width"
-                android:background="@color/colorMandaratLine"/>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1">
-
-                <View
-                    android:layout_width="@dimen/mandarat_line_width"
-                    android:layout_height="match_parent"
-                    android:background="@color/colorMandaratLine"/>
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1">
-                    <EditText
-                        android:id="@+id/edit4"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:background="@android:color/transparent"/>
-
-
-                </LinearLayout>
-                <View
-                    android:layout_width="@dimen/mandarat_line_width"
-                    android:layout_height="match_parent"
-                    android:background="@color/colorMandaratLine"/>
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1">
-                    <EditText
-                        android:id="@+id/edit5"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:background="@android:color/transparent"/>
-
-                </LinearLayout>
-                <View
-                    android:layout_width="@dimen/mandarat_line_width"
-                    android:layout_height="match_parent"
-                    android:background="@color/colorMandaratLine"/>
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1">
-                    <EditText
-                        android:id="@+id/edit6"
+                    <TextView
+                        android:id="@+id/text3"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:gravity="center"
@@ -208,8 +93,71 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1">
-                    <EditText
-                        android:id="@+id/edit7"
+                    <TextView
+                        android:id="@+id/text4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:background="@android:color/transparent"/>
+
+
+                </LinearLayout>
+                <View
+                    android:layout_width="@dimen/mandarat_line_width"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorMandaratLine"/>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+                    <TextView
+                        android:id="@+id/text5"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:background="@android:color/transparent"/>
+
+                </LinearLayout>
+                <View
+                    android:layout_width="@dimen/mandarat_line_width"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorMandaratLine"/>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+                    <TextView
+                        android:id="@+id/text6"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:background="@android:color/transparent"/>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="@dimen/mandarat_line_width"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorMandaratLine"/>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/mandarat_line_width"
+                android:background="@color/colorMandaratLine"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <View
+                    android:layout_width="@dimen/mandarat_line_width"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorMandaratLine"/>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+                    <TextView
+                        android:id="@+id/text7"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:gravity="center"
@@ -223,8 +171,8 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1">
-                    <EditText
-                        android:id="@+id/edit8"
+                    <TextView
+                        android:id="@+id/text8"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:gravity="center"
@@ -238,8 +186,8 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1">
-                    <EditText
-                        android:id="@+id/edit9"
+                    <TextView
+                        android:id="@+id/text9"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:gravity="center"
@@ -258,61 +206,5 @@
                 android:layout_height="@dimen/mandarat_line_width"
                 android:background="@color/colorMandaratLine"/>
         </LinearLayout>
-
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent">
-
-            <Button
-                android:layout_margin="10dp"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:background="@drawable/btn_round_rect_maincolor"
-                android:textColor="@color/colorPrimary"
-                android:gravity="center"
-                android:text="→"
-                android:id="@+id/btn_right"
-                android:layout_centerInParent="true"/>
-        </RelativeLayout>
     </LinearLayout>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <Button
-            android:layout_margin="10dp"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:background="@drawable/btn_round_rect_maincolor"
-            android:textColor="@color/colorPrimary"
-            android:gravity="center"
-            android:id="@+id/btn_left_down"
-            android:text="↙"
-            android:layout_alignParentLeft="true"
-            android:layout_centerVertical="true"/>
-
-        <Button
-            android:layout_margin="10dp"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:background="@drawable/btn_round_rect_maincolor"
-            android:textColor="@color/colorPrimary"
-            android:gravity="center"
-            android:text="↓"
-            android:id="@+id/btn_down"
-            android:layout_centerInParent="true"/>
-
-        <Button
-            android:layout_margin="10dp"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:background="@drawable/btn_round_rect_maincolor"
-            android:textColor="@color/colorPrimary"
-            android:gravity="center"
-            android:id="@+id/btn_right_down"
-            android:text="↘"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"/>
-    </RelativeLayout>
 </LinearLayout>

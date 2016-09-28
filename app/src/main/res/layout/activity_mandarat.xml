@@ -2,6 +2,7 @@
 
 <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_coordinator"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -54,39 +55,86 @@
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         <LinearLayout
-            android:gravity="center"
-            android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:paddingBottom="@dimen/activity_vertical_margin"
-            android:paddingLeft="@dimen/activity_horizontal_margin"
-            android:paddingRight="@dimen/activity_horizontal_margin"
-            android:paddingTop="@dimen/activity_vertical_margin">
+            android:gravity="center"
+            android:orientation="vertical">
 
-            <android.support.v7.widget.CardView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true">
 
-                <kr.applepi.ideastation.views.MandaratView
-                    android:layout_width="@dimen/mandarat_tile_size"
-                    android:layout_height="@dimen/mandarat_tile_size"
-                    app:mandarat_textColor="@color/colorWhiteText" />
-            </android.support.v7.widget.CardView>
-
-            <Button
-                android:id="@+id/btn_write"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/main_button_height"
-                android:layout_marginBottom="20dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/btn_round_rect_maincolor"
-                android:text="아이디어 작성하기"
-                android:textColor="@color/colorPrimary"
-                android:textSize="@dimen/main_button_text_size" />
+                android:layout_height="50dp"
+                android:layout_marginBottom="15dp"
+                android:orientation="horizontal"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
 
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <Button
+                        android:id="@+id/btn_tab_makeIdea"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="?attr/selectableItemBackground"
+                        android:text="발상"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="16sp" />
+
+                    <View
+                        android:id="@+id/line_detail"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/colorPrimary" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <Button
+                        android:id="@+id/btn_tab_write"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="?attr/selectableItemBackground"
+                        android:text="입력"
+                        android:textColor="#BDBDBD"
+                        android:textSize="16sp" />
+
+                    <View
+                        android:id="@+id/line_review"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/colorPrimary"
+                        android:visibility="invisible" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <ViewFlipper
+                android:id="@+id/flipper_mandarat"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:measureAllChildren="false">
+
+                <fragment
+                    android:id="@+id/fragment_mandarat"
+                    android:name="kr.applepi.ideastation.fragment.MandaratFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:layout="@layout/fragment_mandarat" />
+
+                <fragment
+                    android:id="@+id/fragment_write"
+                    android:name="kr.applepi.ideastation.fragment.WriteFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:layout="@layout/fragment_write" />
+            </ViewFlipper>
         </LinearLayout>
 
     </android.support.v4.widget.NestedScrollView>
