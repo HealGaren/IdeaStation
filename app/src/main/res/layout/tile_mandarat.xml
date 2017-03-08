@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
-    android:layout_width="@dimen/mandarat_tile_size"
-    android:layout_height="@dimen/mandarat_tile_size">
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
     <RelativeLayout
-        android:layout_width="match_parent"
+        android:layout_width="@dimen/mandarat_edit_full_size"
         android:layout_height="wrap_content">
         <Button
             android:id="@+id/btn_left_up"
@@ -42,13 +42,12 @@
     </RelativeLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:orientation="horizontal"
-        android:layout_weight="1">
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
         <RelativeLayout
             android:layout_width="wrap_content"
-            android:layout_height="match_parent">
+            android:layout_height="259dp">
 
             <Button
                 android:layout_margin="10dp"
@@ -62,9 +61,8 @@
                 android:layout_centerInParent="true"/>
         </RelativeLayout>
         <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <View
@@ -72,18 +70,16 @@
                 android:layout_height="@dimen/mandarat_line_width"
                 android:background="@color/colorMandaratLine"/>
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1">
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/mandarat_edit_size">
 
                 <View
                     android:layout_width="@dimen/mandarat_line_width"
                     android:layout_height="match_parent"
                     android:background="@color/colorMandaratLine"/>
                 <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1">
+                    android:layout_width="@dimen/mandarat_edit_size"
+                    android:layout_height="match_parent">
                     <EditText
                         android:id="@+id/edit1"
                         android:layout_width="match_parent"
@@ -97,9 +93,8 @@
                     android:layout_height="match_parent"
                     android:background="@color/colorMandaratLine"/>
                 <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1">
+                    android:layout_width="@dimen/mandarat_edit_size"
+                    android:layout_height="match_parent">
                     <EditText
                         android:id="@+id/edit2"
                         android:layout_width="match_parent"
@@ -112,9 +107,8 @@
                     android:layout_height="match_parent"
                     android:background="@color/colorMandaratLine"/>
                 <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1">
+                    android:layout_width="@dimen/mandarat_edit_size"
+                    android:layout_height="match_parent">
                     <EditText
                         android:id="@+id/edit3"
                         android:layout_width="match_parent"
@@ -133,18 +127,16 @@
                 android:layout_height="@dimen/mandarat_line_width"
                 android:background="@color/colorMandaratLine"/>
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1">
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/mandarat_edit_size">
 
                 <View
                     android:layout_width="@dimen/mandarat_line_width"
                     android:layout_height="match_parent"
                     android:background="@color/colorMandaratLine"/>
                 <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1">
+                    android:layout_width="@dimen/mandarat_edit_size"
+                    android:layout_height="match_parent">
                     <EditText
                         android:id="@+id/edit4"
                         android:layout_width="match_parent"
@@ -159,9 +151,8 @@
                     android:layout_height="match_parent"
                     android:background="@color/colorMandaratLine"/>
                 <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1">
+                    android:layout_width="@dimen/mandarat_edit_size"
+                    android:layout_height="match_parent">
                     <EditText
                         android:id="@+id/edit5"
                         android:layout_width="match_parent"
@@ -175,9 +166,8 @@
                     android:layout_height="match_parent"
                     android:background="@color/colorMandaratLine"/>
                 <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1">
+                    android:layout_width="@dimen/mandarat_edit_size"
+                    android:layout_height="match_parent">
                     <EditText
                         android:id="@+id/edit6"
                         android:layout_width="match_parent"
@@ -196,18 +186,16 @@
                 android:layout_height="@dimen/mandarat_line_width"
                 android:background="@color/colorMandaratLine"/>
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1">
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/mandarat_edit_size">
 
                 <View
                     android:layout_width="@dimen/mandarat_line_width"
                     android:layout_height="match_parent"
                     android:background="@color/colorMandaratLine"/>
                 <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1">
+                    android:layout_width="@dimen/mandarat_edit_size"
+                    android:layout_height="match_parent">
                     <EditText
                         android:id="@+id/edit7"
                         android:layout_width="match_parent"
@@ -220,9 +208,8 @@
                     android:layout_height="match_parent"
                     android:background="@color/colorMandaratLine"/>
                 <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1">
+                    android:layout_width="@dimen/mandarat_edit_size"
+                    android:layout_height="match_parent">
                     <EditText
                         android:id="@+id/edit8"
                         android:layout_width="match_parent"
@@ -235,9 +222,8 @@
                     android:layout_height="match_parent"
                     android:background="@color/colorMandaratLine"/>
                 <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1">
+                    android:layout_width="@dimen/mandarat_edit_size"
+                    android:layout_height="match_parent">
                     <EditText
                         android:id="@+id/edit9"
                         android:layout_width="match_parent"
@@ -261,7 +247,7 @@
 
         <RelativeLayout
             android:layout_width="wrap_content"
-            android:layout_height="match_parent">
+            android:layout_height="259dp">
 
             <Button
                 android:layout_margin="10dp"
@@ -277,7 +263,7 @@
     </LinearLayout>
 
     <RelativeLayout
-        android:layout_width="match_parent"
+        android:layout_width="@dimen/mandarat_edit_full_size"
         android:layout_height="wrap_content">
 
         <Button

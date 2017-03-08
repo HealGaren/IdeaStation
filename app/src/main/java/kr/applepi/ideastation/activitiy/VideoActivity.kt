@@ -5,17 +5,17 @@ import android.media.MediaPlayer
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
+import android.view.View
 import android.webkit.WebSettings
 import android.webkit.WebView
 import android.webkit.WebViewClient
 import kotlinx.android.synthetic.main.activity_video.*
-import kotlinx.android.synthetic.main.item_video2.*
 import kr.applepi.ideastation.R
 import kr.applepi.ideastation.databinding.ActivitySearchBinding
 
 class VideoActivity : BaseAppCompatActivity() {
 
-
+    val webviewArr: Array<Pair<WebView, String>?> = Array(4){null}
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,17 +25,29 @@ class VideoActivity : BaseAppCompatActivity() {
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
         collapsingToolbarLayout.setExpandedTitleColor(0x00ffffff);
 
-        val frameVideo = "<html><body><iframe width=\"320\" height=\"180\" src=\"https://www.youtube.com/embed/2buKYjpqcVQ\" frameborder=\"0\" allowfullscreen></iframe></body></html>"
+        webviewArr[0] = Pair(video1.findViewById(R.id.webview) as WebView, "https://www.youtube.com/embed/qJYn1rCQajQ")
+        webviewArr[1] = Pair(video2.findViewById(R.id.webview) as WebView, "https://www.youtube.com/embed/2buKYjpqcVQ")
+        webviewArr[2] = Pair(video3.findViewById(R.id.webview) as WebView, "https://www.youtube.com/embed/p7UEmB3QkvE")
+        webviewArr[3] = Pair(video4.findViewById(R.id.webview) as WebView, "https://www.youtube.com/embed/BsN4RU4QaTQ")
 
-        webview.setWebViewClient(object : WebViewClient() {
-            override fun shouldOverrideUrlLoading(view: WebView, url: String): Boolean {
-                return false
-            }
-        })
-        val webSettings = webview.getSettings()
-        webSettings.javaScriptEnabled = true
-        webview.loadData(frameVideo, "text/html", "utf-8")
+        loadVideo()
 
+    }
+
+    fun loadVideo(){
+        webviewArr.forEach {
+            if(it == null) return@forEach
+            val frameVideo = "<html><body><iframe width=\"320\" height=\"180\" src=\"" + it.second + "\" frameborder=\"0\" allowfullscreen></iframe></body></html>"
+
+            it.first.setWebViewClient(object : WebViewClient() {
+                override fun shouldOverrideUrlLoading(view: WebView, url: String): Boolean {
+                    return false
+                }
+            })
+            val webSettings = it.first.getSettings()
+            webSettings.javaScriptEnabled = true
+            it.first.loadData(frameVideo, "text/html", "utf-8")
+        }
     }
 
 
@@ -56,12 +68,12 @@ class VideoActivity : BaseAppCompatActivity() {
 
     override fun onPause() {
         super.onPause()
-        webview.onPause()
+        webviewArr.forEach{ it?.first?.onPause() }
     }
 
     override fun onResume() {
         super.onResume()
-        webview.onResume()
+        webviewArr.forEach{ it?.first?.onResume() }
 
     }
 }

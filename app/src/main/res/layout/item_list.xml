@@ -31,13 +31,14 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/colorAccentDark">
+                android:background='@{item.method.equals("mandarat") ? @color/colorAccentDark : (item.method.equals("words") ? @color/colorPrimaryDark : @color/colorGrey)}'>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
                     android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
                     android:layout_marginTop="10dp"
                     android:orientation="vertical">
 
@@ -46,6 +47,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="15dp"
+                        android:lines="1"
+                        android:ellipsize="end"
                         android:text="@{item.detail.title}"
                         android:textColor="#FFF"
                         android:textSize="30sp" />
@@ -99,7 +102,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
-                    android:text="만다라트"
+                    android:text='@{item.method.equals("mandarat") ? @string/method_mandarat : (item.method.equals("words") ? @string/method_words : @string/method_direct )}'
                     android:textColor="@color/dictionary_color"
                     android:textSize="12sp" />
             </LinearLayout>

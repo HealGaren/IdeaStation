@@ -50,10 +50,10 @@ class SelectActivity : BaseAppCompatActivity() {
         }}
 
         btn_select_done.setOnClickListener{
-            finish();
+            finish()
             startActivity(Intent(this, when(selectType){
                 btn_select_mandarat -> MandaratActivity::class
-                else -> MandaratActivity::class
+                else -> WordsActivity::class
             }.java))
         }
     }

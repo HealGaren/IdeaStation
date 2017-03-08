@@ -6,7 +6,7 @@ import android.os.Bundle
 import kr.applepi.ideastation.R
 import kr.applepi.ideastation.databinding.ActivitySearchBinding
 
-class SearchActivity : BaseAppCompatActivity() {
+class TrizActivity : BaseAppCompatActivity() {
 
     val binding : ActivitySearchBinding by lazy {
         DataBindingUtil.setContentView<ActivitySearchBinding>(this, R.layout.activity_search)

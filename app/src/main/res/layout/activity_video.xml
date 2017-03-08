@@ -81,13 +81,17 @@ xmlns:tools="http://schemas.android.com/tools"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <include layout="@layout/item_video" />
+                <include layout="@layout/item_video"
+                    android:id="@+id/video1"/>
 
-                <include layout="@layout/item_video2" />
+                <include layout="@layout/item_video2"
+                    android:id="@+id/video2"/>
 
-                <include layout="@layout/item_video3" />
+                <include layout="@layout/item_video3"
+                    android:id="@+id/video3"/>
 
-                <include layout="@layout/item_video4" />
+                <include layout="@layout/item_video4"
+                    android:id="@+id/video4"/>
             </LinearLayout>
         </android.support.v4.widget.NestedScrollView>
 

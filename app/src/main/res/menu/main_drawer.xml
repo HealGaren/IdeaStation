@@ -1,44 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <group android:checkableBehavior="single">
-        <item
-            android:id="@+id/nav_store"
-            android:icon="@mipmap/ic_launcher"
-            android:title="하이"
-            android:checkable="false"
-            />
-        <item
-            android:id="@+id/nav_setting"
-            android:icon="@mipmap/ic_launcher"
-            android:title="바이"
-            android:checkable="false"
-            />
-        <item
-            android:id="@+id/nav_notice"
-            android:icon="@mipmap/ic_launcher"
-            android:title="아아아아"
-            android:checkable="false"
-            />
-        <item
-            android:id="@+id/nav_customer_center"
-            android:icon="@mipmap/ic_launcher"
-            android:title="귀차나"
-            android:checkable="false"
-            />
-    </group>
+    <!--<group android:checkableBehavior="single">-->
 
-    <item android:title="더보기">
+    <item android:title="데이터 관리">
         <menu>
             <item
-                android:id="@+id/nav_invite"
-                android:title="으어어어"
-                />
+                android:id="@+id/nav_btn_upload"
+                android:checkable="false"
+                android:icon="@drawable/ic_nav_download"
+                android:title="서버에 데이터 백업" />
             <item
-                android:id="@+id/nav_cash"
-                android:title="ㅎㅎ"
-                />
+                android:id="@+id/nav_btn_download"
+                android:checkable="false"
+                android:icon="@drawable/ic_nav_upload"
+                android:title="서버에서 데이터 복원" />
         </menu>
     </item>
+    <!--</group>-->
 
 </menu>

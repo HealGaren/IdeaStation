@@ -7,9 +7,16 @@
 
     <dimen name="main_button_text_size">17sp</dimen>
     <dimen name="main_button_height">50dp</dimen>
-    <dimen name="main_button_margin_top">20dp</dimen>
+    <dimen name="main_button_margin_top">15dp</dimen>
 
-    <dimen name="mandarat_tile_size">310dp</dimen>
+    <dimen name="mandarat_edit_size">85dp</dimen>
+    <dimen name="mandarat_edit_full_size">349dp</dimen>
+    <!--85*3+45*2+1*4-->
+    <dimen name="mandarat_text_size">37dp</dimen>
+    <dimen name="mandarat_text_full_size">345dp</dimen>
+    <dimen name="mandarat_text_font_size">9sp</dimen>
+    <!--(37*3+1*4)*3-->
+
     <dimen name="mandarat_line_width">1dp</dimen>
 
 

@@ -11,8 +11,9 @@
         android:layout_height="wrap_content">
 
         <kr.applepi.ideastation.view.MandaratView
-            android:layout_width="@dimen/mandarat_tile_size"
-            android:layout_height="@dimen/mandarat_tile_size"
+            android:id="@+id/mandaratView"
+            android:layout_width="@dimen/mandarat_edit_full_size"
+            android:layout_height="@dimen/mandarat_edit_full_size"
             app:mandarat_textColor="@color/colorWhiteText" />
     </android.support.v7.widget.CardView>
 

@@ -8,11 +8,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import kotlinx.android.synthetic.main.fragment_mandarat.*
+import kotlinx.android.synthetic.main.fragment_mandarat.view.*
 import kotlinx.android.synthetic.main.fragment_write.*
 import kr.applepi.ideastation.R
 import kr.applepi.ideastation.activitiy.ListActivity
 import kr.applepi.ideastation.activitiy.MandaratActivity
-import kr.applepi.ideastation.data.Data
+import kr.applepi.ideastation.data.IdeaData
 import kr.applepi.ideastation.data.Idea
 import kr.applepi.ideastation.data.IdeaDetail
 import kr.applepi.ideastation.data.IdeaReview
@@ -23,14 +24,11 @@ import kr.applepi.ideastation.data.IdeaReview
 
 class MandaratFragment : Fragment() {
 
-
-
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View {
 
 
         val view = inflater!!.inflate(R.layout.fragment_mandarat, container, false)
-
-
+        view.btn_mandaratToggle.setOnClickListener { view.mandaratView.toggleShowAllMode() }
         return view
     }
 }

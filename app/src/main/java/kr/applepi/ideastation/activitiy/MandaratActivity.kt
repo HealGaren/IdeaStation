@@ -1,24 +1,10 @@
 package kr.applepi.ideastation.activitiy
 
-import android.app.ActionBar
-import android.content.Intent
-import android.databinding.DataBindingUtil
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.support.v4.app.Fragment
-import android.support.v4.app.FragmentManager
-import android.support.v4.app.FragmentPagerAdapter
 import android.support.v4.content.ContextCompat
-import android.support.v7.app.AlertDialog
-import android.view.LayoutInflater
 import android.view.View
-import android.view.WindowManager
 import kotlinx.android.synthetic.main.activity_mandarat.*
-import kotlinx.android.synthetic.main.fragment_write.view.*
 import kr.applepi.ideastation.R
-import kr.applepi.ideastation.data.*
-import kr.applepi.ideastation.fragment.MandaratFragment
-import kr.applepi.ideastation.fragment.WriteFragment
 
 class MandaratActivity : BaseAppCompatActivity() {
 

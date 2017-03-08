@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="item"
+            type="kr.applepi.ideastation.data.IdeaReviewSWOT" />
+    </data>
 
     <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -60,69 +66,78 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                    <android.support.design.widget.TextInputLayout
-                        android:id="@+id/edit_strength_layout"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-
-                        <EditText
-                            android:id="@+id/edit_strength"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="강점(Strength)" />
-                    </android.support.design.widget.TextInputLayout>
-
-                    <android.support.design.widget.TextInputLayout
-                        android:id="@+id/edit_weakness_layout"
+                    <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp">
+                        android:layout_marginTop="20dp"
+                        android:text="강점(Strength)"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="13sp" />
 
-                        <EditText
-                            android:id="@+id/edit_weakness"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="약점(Weakness)" />
-                    </android.support.design.widget.TextInputLayout>
-
-                    <android.support.design.widget.TextInputLayout
-                        android:id="@+id/edit_opportunity_layout"
+                    <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp">
+                        android:layout_marginTop="5dp"
+                        android:text="@{item.s}"
+                        android:textSize="20sp" />
 
-                        <EditText
-                            android:id="@+id/edit_opportunity"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="기회(Opportunity)"
 
-                            />
-                    </android.support.design.widget.TextInputLayout>
-
-                    <android.support.design.widget.TextInputLayout
-                        android:id="@+id/edit_threat_layout"
+                    <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp">
+                        android:layout_marginTop="20dp"
+                        android:text="약점(Weakness)"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="13sp" />
 
-                        <EditText
-                            android:id="@+id/edit_threat"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="위협(Threat)"
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="@{item.w}"
+                        android:textSize="20sp" />
 
-                            />
-                    </android.support.design.widget.TextInputLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="기회(Opportunity)"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="@{item.o}"
+                        android:textSize="20sp" />
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="위협(Threat)"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="@{item.t}"
+                        android:textSize="20sp" />
+
                 </LinearLayout>
 
                 <Button
-                    android:id="@+id/btn_swot_done"
+                    android:id="@+id/btn_swot_edit"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:layout_marginTop="10dp"
                     android:background="@drawable/btn_round_rect_maincolor"
-                    android:text="저장"
+                    android:text="수정"
                     android:textColor="@color/colorPrimary"
                     android:textSize="@dimen/main_button_text_size" />
 

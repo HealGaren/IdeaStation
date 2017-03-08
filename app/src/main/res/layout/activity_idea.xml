@@ -38,7 +38,8 @@
                     app:layout_collapseMode="parallax"
                     app:layout_collapseParallaxMultiplier="0.7">
 
-                    <include layout="@layout/toolbar_idea" />
+                    <include layout="@layout/toolbar_idea"
+                        app:item="@{item.review.reviewCustom != null &amp;&amp; item.review.reviewSWOT != null &amp;&amp; item.review.review5why != null}"/>
                 </RelativeLayout>
 
                 <android.support.v7.widget.Toolbar

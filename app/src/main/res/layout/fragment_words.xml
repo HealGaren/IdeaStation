@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="280dp">
+
+        <LinearLayout
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/circle_maincolor"></LinearLayout>
+
+        <TextView
+            android:id="@+id/word1"
+            android:layout_marginTop="10dp"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:textColor="@color/colorPrimary"
+            android:text="자장면"
+            android:background="@drawable/circle_maincolor_dark_bg_white" />
+
+
+        <TextView
+            android:id="@+id/word2"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:textColor="@color/colorPrimary"
+            android:text="짬뽕"
+            android:background="@drawable/circle_maincolor_dark_bg_white" />
+
+        <TextView
+            android:id="@+id/word3"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:textColor="@color/colorPrimary"
+            android:text="탕수육"
+            android:background="@drawable/circle_maincolor_dark_bg_white"/>
+    </RelativeLayout>
+
+
+    <Button
+        android:id="@+id/btn_shuffle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/main_button_height"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/btn_round_rect_maincolor"
+        android:text="섞기"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/main_button_text_size" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="터치해서 특정 단어를 고정시킨 후 섞을 수 있습니다."/>
+
+</LinearLayout>

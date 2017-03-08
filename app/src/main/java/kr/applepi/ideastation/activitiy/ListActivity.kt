@@ -37,7 +37,7 @@ class ListActivity : BaseAppCompatActivity() {
 
         recycler_list.layoutManager = LinearLayoutManager(this)
 
-        LastAdapter.with(Data.ideaList, BR.item)
+        LastAdapter.with(IdeaData.ideaList, BR.item)
                 .map<Idea>(R.layout.item_list)
                 .onClick {
                     startActivity(Intent(this@ListActivity, IdeaActivity::class.java).apply {
@@ -66,11 +66,11 @@ class ListActivity : BaseAppCompatActivity() {
 //            holder?.itemView?.setOnClickListener { startActivity(Intent(this@ListActivity, IdeaActivity::class.java).apply{
 //                putExtra("position", position)
 //            }) }
-//            holder?.binding?.setVariable(BR.item, Data.ideaList.get(position))
+//            holder?.binding?.setVariable(BR.item, IdeaData.ideaList.get(position))
 //        }
 //
 //        override fun getItemCount(): Int {
-//            return Data.ideaList.size
+//            return IdeaData.ideaList.size
 //        }
 //
 //        inner class MyVH(item: View) : RecyclerView.ViewHolder(item) {

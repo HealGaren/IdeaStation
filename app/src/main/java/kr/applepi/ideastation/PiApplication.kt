@@ -2,7 +2,8 @@ package kr.applepi.ideastation
 
 import android.app.Application
 import com.tsengvn.typekit.Typekit
-import kr.applepi.ideastation.data.Data
+import kr.applepi.ideastation.data.AuthData
+import kr.applepi.ideastation.data.IdeaData
 import kr.applepi.ideastation.data.IdeaDetail
 
 /**
@@ -16,7 +17,8 @@ class PiApplication : Application() {
                 .addCustom1(Typekit.createFromAsset(this, "NanumBarunGothicLight.otf"))
                 .addNormal(Typekit.createFromAsset(this, "NanumBarunGothic.otf"))
                 .addBold(Typekit.createFromAsset(this, "NanumBarunGothicBold.otf"))
-        Data.init(this)
-    }
+        IdeaData.init(this)
+        AuthData.init(this)
 
+    }
 }

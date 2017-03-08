@@ -16,6 +16,7 @@ import android.view.ViewGroup
 import android.view.animation.Animation
 import android.view.animation.Transformation
 import android.view.animation.TranslateAnimation
+import android.view.inputmethod.InputMethodManager
 import android.widget.*
 import kotlinx.android.synthetic.main.tile_mandarat.view.*
 import kotlinx.android.synthetic.main.tile_mandarat_show.view.*
@@ -40,14 +41,17 @@ class MandaratView : RelativeLayout {
 
     private val pref: SharedPreferences
 
-    private var showAllMode: Boolean = false
+    var showAllMode: Boolean = false
         set(value) {
-            if (!showAllMode && value) {
-
-            } else if (showAllMode && !value) {
-
+            if (showAllMode != value) {
+                flipper_mandaratView.showNext()
+                field = value
             }
         }
+
+    fun toggleShowAllMode() {
+        showAllMode = !showAllMode
+    }
 
     constructor(context: Context?, attrs: AttributeSet?, defStyleAttr: Int)
     : super(context, attrs, defStyleAttr) {
@@ -61,7 +65,39 @@ class MandaratView : RelativeLayout {
 
         LayoutInflater.from(context).inflate(R.layout.view_mandarat, this)
 
-        setTextColor(textColor)
+        setEditTextColor(textColor)
+        setShowTextColor(textColor)
+
+        initEditView()
+        initShowView()
+
+        val edits = superView_edit.run { arrayOf(tile1, tile2, tile3, tile4, tile5, tile6, tile7, tile8, tile9) }
+        val texts = superView_show.run { arrayOf(tile1, tile2, tile3, tile4, tile5, tile6, tile7, tile8, tile9) }
+
+        for (i in 0..edits.size - 1) {
+            val editTexts = edits[i].run { arrayOf(edit1, edit2, edit3, edit4, edit5, edit6, edit7, edit8, edit9) }
+            val textViews = texts[i].run { arrayOf(text1, text2, text3, text4, text5, text6, text7, text8, text9) }
+            for (j in 0..editTexts.size - 1) {
+                editTexts[j].addTextChangedListener(object : TextWatcher {
+                    override fun afterTextChanged(p0: Editable?) {
+                    }
+
+                    override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+                    }
+
+                    override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+                        textViews[j].text = p0
+                    }
+                })
+            }
+        }
+
+        post{setTileToCenter()}
+
+    }
+
+
+    private fun initEditView() {
 
         superView_edit.run {
             val tileArr = arrayOf(tile1, tile2, tile3, tile4, tile6, tile7, tile8, tile9)
@@ -118,31 +154,33 @@ class MandaratView : RelativeLayout {
                     btnArr[i].setOnClickListener { gotoChild(tileArr[i]) }
                 }
             }
-            setTileToCenter()
         }
+    }
 
-        val edits = superView_edit.run { arrayOf(tile1, tile2, tile3, tile4, tile5, tile6, tile7, tile8, tile9) }
-        val texts = superView_show.run { arrayOf(tile1, tile2, tile3, tile4, tile5, tile6, tile7, tile8, tile9) }
 
-        for(i in 0..edits.size - 1){
-            val editTexts = edits[i].run{ arrayOf(edit1, edit2, edit3, edit4, edit5, edit6, edit7, edit8, edit9) }
-            val textViews = texts[i].run{ arrayOf(text1, text2, text3, text4, text5, text6, text7, text8, text9) }
-            for(j in 0..editTexts.size - 1){
-                editTexts[j].addTextChangedListener(object : TextWatcher{
-                    override fun afterTextChanged(p0: Editable?) {
+    private fun initShowView() {
+
+        superView_show.run {
+            val tileArr = arrayOf(tile1, tile2, tile3, tile4, tile6, tile7, tile8, tile9)
+
+            for (i in 0..tileArr.size - 1) {
+                tileArr[i].run {
+                    arrayOf(text1, text2, text3, text4, text6, text7, text8, text9).forEach {
+                        it.setBackgroundColor(ContextCompat.getColor(context, R.color.colorMandaratLow))
                     }
+                    text5.setBackgroundColor(ContextCompat.getColor(context, R.color.colorMandaratMedium))
+                }
+            }
 
-                    override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-                    }
-
-                    override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-                        textViews[j].text = p0
-                    }
-                })
+            tile5.run {
+                arrayOf(text1, text2, text3, text4, text6, text7, text8, text9).forEach {
+                    it.setBackgroundColor(ContextCompat.getColor(context, R.color.colorMandaratMedium))
+                }
+                text5.setBackgroundColor(ContextCompat.getColor(context, R.color.colorMandaratHigh))
             }
         }
-
     }
+
 
     private fun gotoParent() {
 
@@ -179,6 +217,8 @@ class MandaratView : RelativeLayout {
 
             startAnimation(ani)
         }
+
+        hideKeyboard()
     }
 
 
@@ -234,6 +274,15 @@ class MandaratView : RelativeLayout {
             startAnimation(ani)
 
         }
+
+        hideKeyboard()
+
+    }
+
+    private fun hideKeyboard() {
+        clearFocus()
+        val imm = context.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+        imm.hideSoftInputFromWindow(windowToken, 0)
     }
 
     fun save() {
@@ -247,7 +296,7 @@ class MandaratView : RelativeLayout {
         }
     }
 
-    fun setTextColor(color: Int) {
+    fun setEditTextColor(color: Int) {
         superView_edit.run {
             arrayOf(tile1, tile2, tile3, tile4, tile5, tile6, tile7, tile8, tile9).forEach {
                 it.run {
@@ -259,12 +308,24 @@ class MandaratView : RelativeLayout {
         }
     }
 
-    fun setTileToCenter() {
-        superView_edit.run {
-            val params = layoutParams as FrameLayout.LayoutParams
-            params.leftMargin = -tile4.width
-            params.topMargin = -tile2.height
-            layoutParams = params
+
+    fun setShowTextColor(color: Int) {
+        superView_show.run {
+            arrayOf(tile1, tile2, tile3, tile4, tile5, tile6, tile7, tile8, tile9).forEach {
+                it.run {
+                    arrayOf(text1, text2, text3, text4, text5, text6, text7, text8, text9).forEach {
+                        it.setTextColor(color)
+                    }
+                }
+            }
         }
+    }
+
+    fun setTileToCenter() {
+        val params = superView_edit.layoutParams as FrameLayout.LayoutParams
+        params.leftMargin = -superView_edit.tile4.width
+        params.topMargin = -superView_edit.tile2.height
+        superView_edit.layoutParams = params
+        invalidate()
     }
 }

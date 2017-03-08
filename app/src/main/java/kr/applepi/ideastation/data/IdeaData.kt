@@ -12,16 +12,16 @@ import java.util.*
 /**
  * Created by 최예찬 on 2016-09-24.
  */
-object Data {
+object IdeaData {
 
-    lateinit var context: Context
-    lateinit var pref: SharedPreferences
+    private lateinit var context: Context
+    private lateinit var pref: SharedPreferences
 
     val ideaList: ArrayList<Idea> = ArrayList()
-    val gson = Gson()
-    val type: Type = object : TypeToken<ArrayList<Idea>>(){}.type
+    private val gson = Gson()
+    private val type: Type = object : TypeToken<ArrayList<Idea>>(){}.type
 
-    const val IDEA_LIST_KEY: String = "idea_list"
+    private const val IDEA_LIST_KEY: String = "idea_list"
     fun init(context: Context){
         this.context = context
         pref = context.getSharedPreferences("IDEA", Context.MODE_PRIVATE)
@@ -36,4 +36,14 @@ object Data {
     fun saveIdeaList(){
         pref.edit().putString(IDEA_LIST_KEY, gson.toJson(ideaList)).apply()
     }
+
+    fun getDataString(): String{
+        return gson.toJson(ideaList)
+    }
+
+    fun applyDataString(data: String){
+        ideaList.clear()
+        ideaList.addAll(gson.fromJson<ArrayList<Idea>>(data, type))
+    }
+
 }

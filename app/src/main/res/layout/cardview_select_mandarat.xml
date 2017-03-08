@@ -32,8 +32,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="9개의 타일에 단어를 채워가는 방식입니다." />
+                    android:gravity="center_vertical"
+                    android:text="9개의 타일에 주제를 중심으로 총 81개의 연관된 단어를 채워가며 발상해내는 방식입니다." />
             </LinearLayout>
 
             <RelativeLayout
@@ -75,9 +75,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="많은 아이디어를 찾아내는 효과적인 개인의 아이디어 발상법이다."
-                    android:textSize="20sp" />
+                    android:gravity="center_vertical"
+                    android:text="- 중심 주제가 주어져 있는 공모전 등에 효과적인 방식입니다.\n- 정형화된 패턴으로 한 눈에 잘 들어옵니다."
+                    android:textSize="14sp" />
             </LinearLayout>
         </LinearLayout>
     </android.support.v7.widget.CardView>

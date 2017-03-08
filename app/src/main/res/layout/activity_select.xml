@@ -118,6 +118,14 @@
                     android:layout_height="1dp"
                     android:layout_marginTop="10dp"
                     android:background="#FFF" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:textSize="12sp"
+                    android:text="카드를 선택하고 한 번 더 눌러 특징을 살펴볼 수 있습니다."
+                    android:textColor="@color/colorWhiteText" />
             </LinearLayout>
 
             <Button

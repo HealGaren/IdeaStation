@@ -25,7 +25,7 @@
             android:paddingLeft="@dimen/activity_horizontal_margin"
             android:paddingRight="@dimen/activity_horizontal_margin"
             android:paddingTop="@dimen/activity_vertical_margin"
-            android:visibility="@{item.reviewSWOT==null ? View.VISIBLE : View.GONE}">
+            android:visibility="@{(item.reviewCustom==null &amp;&amp; item.reviewSWOT==null &amp;&amp; item.review5why==null) ? View.VISIBLE : View.GONE}">
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -48,7 +48,16 @@
         </RelativeLayout>
 
         <include
+            layout="@layout/content_idea_review_custom"
+            app:visibility="@{item.reviewCustom!=null ? View.VISIBLE : View.GONE}" />
+
+        <include
             layout="@layout/content_idea_review_swot"
             app:visibility="@{item.reviewSWOT!=null ? View.VISIBLE : View.GONE}" />
+
+        <include
+            layout="@layout/content_idea_review_5why"
+            app:visibility="@{item.review5why!=null ? View.VISIBLE : View.GONE}" />
+
     </LinearLayout>
 </layout>

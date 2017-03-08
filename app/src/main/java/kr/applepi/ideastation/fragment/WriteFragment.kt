@@ -9,7 +9,9 @@ import android.view.ViewGroup
 import kotlinx.android.synthetic.main.fragment_write.view.*
 import kr.applepi.ideastation.R
 import kr.applepi.ideastation.activitiy.ListActivity
-import kr.applepi.ideastation.data.Data
+import kr.applepi.ideastation.activitiy.MandaratActivity
+import kr.applepi.ideastation.activitiy.WordsActivity
+import kr.applepi.ideastation.data.IdeaData
 import kr.applepi.ideastation.data.Idea
 import kr.applepi.ideastation.data.IdeaDetail
 import kr.applepi.ideastation.data.IdeaReview
@@ -44,15 +46,20 @@ class WriteFragment : Fragment() {
 
                 if (!flag) {
 
-                    Data.ideaList.add(
+                    IdeaData.ideaList.add(
                             Idea(
                                     IdeaDetail(edit_title.text.toString(), edit_content.text.toString(), edit_benefit.text.toString(),
                                             edit_what.text.toString(), edit_who.text.toString(), edit_why.text.toString(), edit_when.text.toString(), edit_where.text.toString()
                                     ),
-                                    IdeaReview(null)
+                                    IdeaReview(),
+                                    when(activity){
+                                        is MandaratActivity -> "mandarat"
+                                        is WordsActivity -> "words"
+                                        else -> "바로 입력"
+                                    }
                             )
                     )
-                    Data.saveIdeaList()
+                    IdeaData.saveIdeaList()
                     activity.finish()
                     startActivity(Intent(context, ListActivity::class.java))
                 }
@@ -61,4 +68,6 @@ class WriteFragment : Fragment() {
 
         return view
     }
+
+
 }

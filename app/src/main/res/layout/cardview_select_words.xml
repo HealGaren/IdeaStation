@@ -31,8 +31,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="단어 조합법" />
+                    android:gravity="center_vertical"
+                    android:text="랜덤으로 뽑은 3개의 단어를 가지고 아이디어를 도출해냅니다. 단어는 다시 뽑을 수 있습니다." />
             </LinearLayout>
 
             <RelativeLayout
@@ -74,9 +74,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="단어를 조합하여 아이디어를 발상한다."
-                    android:textSize="20sp" />
+                    android:gravity="center_vertical"
+                    android:text="- 주제가 주어지지 않고 자유롭게 생각할 때에 적합한 발상법입니다.\n- 뽑은 특정 단어가 마음에 든다면 고정시킬 수 있습니다."
+
+                    android:textSize="14sp" />
             </LinearLayout>
         </LinearLayout>
     </android.support.v7.widget.CardView>
